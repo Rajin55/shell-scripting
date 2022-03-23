@@ -21,5 +21,6 @@ echo -e "\nHello,\n\nWelcome to devops"
 # Cyan          36
 
 echo -e "\e[32mWelcome to Devops"
+echo Devops
 echo -e "\e[34mWelcome to Devops"
 
