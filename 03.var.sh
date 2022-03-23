@@ -7,3 +7,5 @@
 COURSE=Devops
 
 echo Course Name =$COURSE
+
+DATE=$(date +%F)
