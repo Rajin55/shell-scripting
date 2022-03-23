@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 #Declare a veriable
 
 COURSE=Devops
