@@ -20,7 +20,7 @@ echo -e "\nHello,\n\nWelcome to devops"
 #Magenta        35
 # Cyan          36
 
-echo -e "\e[32mWelcome to Devops"
+echo -e "\e[32mWelcome to Devops\e[0m"
 echo Devops
 echo -e "\e[34mWelcome to Devops"
 
