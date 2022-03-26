@@ -2,7 +2,7 @@
 
 SAMPLE(){
   echo Welcome to sample function
-  echo value of a = $a
+  echo value of a=$a
 }
 SAMPLE
 a=10
