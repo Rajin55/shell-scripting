@@ -14,4 +14,7 @@ ADD=$((2+3+4))
 echo ADD= $ADD
 
 
+echo Variable from command line X =$x
+
+
 
