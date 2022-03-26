@@ -3,6 +3,7 @@
 
 
 echo "Devops"
+exit
 
 
 echo Hello world
