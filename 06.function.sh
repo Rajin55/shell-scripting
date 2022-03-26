@@ -2,9 +2,10 @@
 
 SAMPLE(){
   echo Welcome to sample function
-  echo value of a=$a
+  echo value of a = $a
   b=20
 }
-SAMPLE
 a=10
+SAMPLE
+
 echo value of b = $b
