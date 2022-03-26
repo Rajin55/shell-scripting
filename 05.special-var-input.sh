@@ -10,3 +10,7 @@ echo $1
 #Second argument of the script
 
 echo $2
+
+#Number of arguments
+
+echo $#
