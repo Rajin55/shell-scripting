@@ -7,6 +7,11 @@ echo $0
 
 echo $1
 
+#All the argument parsed
+
+echo $*
+echo $@
+
 #Second argument of the script
 
 echo $2
