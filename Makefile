@@ -1,2 +1,2 @@
 coffe:
-    @echo making cofee
+   @echo making cofee
