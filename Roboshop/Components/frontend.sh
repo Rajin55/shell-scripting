@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-source Roboshop/Components/common.sh
+source common.sh
 rm -f /tmp/roboshop.log
 
 HEAD "Installing Nginx"
