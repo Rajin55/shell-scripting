@@ -1,6 +1,6 @@
 
 frontend:
-	@sh frontend.sh
+	@sh Components/frontend.sh
 
 #mongodb:
 #	@sh mongodb.sh
