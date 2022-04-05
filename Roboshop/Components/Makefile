@@ -1,5 +1,5 @@
-frontend:
-	@sh Components/frontend.sh
+#frontend:
+#	@sh Components/frontend.sh
 
 mongodb:
 	@sh Components/mongodb.sh
