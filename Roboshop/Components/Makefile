@@ -2,7 +2,7 @@
 #	@sh Components/frontend.sh
 
 mongodb:
-	@sh Components/mongodb.sh
+	@sh Roboshop/Components/mongodb.sh
 
 catalogue:
 	@sh Components/catalogue.sh
