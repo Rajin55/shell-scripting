@@ -22,5 +22,4 @@ mysql:
 shipping:
 	@sh components/shipping.sh
 
-payment:
-	@sh components/payment.sh
+
