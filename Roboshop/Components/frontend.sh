@@ -22,11 +22,11 @@ mv /usr/share/nginx/html/frontend-main/* /usr/share/nginx/html/. &>>/tmp/robosho
 mv /usr/share/nginx/html/static/* /usr/share/nginx/html/. &>>/tmp/roboshop.log
 STAT $?
 
-HEAD" Update Nginx Configuration"
+HEAD " Update Nginx Configuration"
 mv /usr/share/nginx/html/localhost.conf /etc/nginx/default.d/roboshop.conf
 STAT $?
 
-HEAD"Start Nginx"
+HEAD "Start Nginx"
 systemctl restart nginx &>>/tmp/roboshop.log
 systemctl enable nginx &>>/tmp/roboshop.log
 
