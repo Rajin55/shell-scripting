@@ -7,3 +7,11 @@ if [ "$username" == "root" ];then
 else
   echo "Hey, user $username is Normal user"
 fi
+
+read -p "Enter filename:" filename
+
+if [ -f "$filename" ];then
+  echo "File is exists"
+else
+  echo "File Not Found"
+fi
