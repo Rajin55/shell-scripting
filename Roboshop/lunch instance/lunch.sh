@@ -16,7 +16,7 @@ if [ "${INSTANCE_STATE}" = "running" ]; then
   exit 0
 fi
 
-if[ "${INSTANCE_STATE}" = "stop" ]; then
+if [ "${INSTANCE_STATE}" = "stop" ]; then
   echo"Instance is already Existed"
   exit 0
 fi
