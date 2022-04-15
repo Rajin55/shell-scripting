@@ -21,4 +21,4 @@ if [ "${INSTANCE_STATE}" = "stop" ]; then
   exit 0
 fi
 
-aws ec2 run-instances --lunch-template LunchTemplateId=${LID},Version=${LVER}  --tag-sepecifications "ResourceType=instance, Tags=[{Key=Name,Value=${COMPONENT}]" | jq
+aws ec2 run-instances --launch-template LaunchTemplateId=${LID},Version=${LVER}  --tag-specifications "ResourceType=instance, Tags=[{Key=Name,Value=${COMPONENT}}]" | jq
