@@ -3,7 +3,7 @@
 source Components/common.sh
 rm -f /tmp/roboshop.log
 
-HEAD"Setup MongoDB yum repo"
+HEAD "Setup MongoDB yum repo"
 echo '[mongodb-org-4.2]
 name=MongoDB Repository
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
