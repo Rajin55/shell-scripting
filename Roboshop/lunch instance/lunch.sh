@@ -7,8 +7,8 @@ if [ -z "${COMPONENT}" ]; then
   echo"Component name is needed"
 fi
 
-LID=lt-06a6fcc7498721348
-LVER=2
+LID=lt-078d60fb07d6684f7
+LVER=1
 
 INSTANCE_STATE=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}" | jq .Reservations[].Instances[].state.Name | xargs -n1 )
 if [ "${INSTANCE_STATE}" = "running" ]; then
