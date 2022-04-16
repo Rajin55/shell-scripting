@@ -2,7 +2,7 @@
 
 source Components/common.sh
 rm -f /tmp/roboshop.log
-set-hostname mongodb
+#set-hostname mongodb
 
 HEAD "Setup MongoDB yum repo"
 echo '[mongodb-org-4.2]
