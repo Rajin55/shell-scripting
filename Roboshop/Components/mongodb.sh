@@ -36,5 +36,5 @@ STAT $?
 
 HEAD "Load Schema\t"
 cd mongodb-main
-mongo < catalogue.js &>>/tmp/roboshop.log && mongo < users.js &>>tmp/roboshop.log
+mongo < catalogue.js &>>/tmp/roboshop.log && mongo < users.js &>>/tmp/roboshop.log
 STAT $?
