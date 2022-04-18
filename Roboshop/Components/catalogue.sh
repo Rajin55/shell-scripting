@@ -27,9 +27,14 @@ cd /home/roboshop && rm -rf catalogue && unzip /tmp/catalogue.zip &>>/tmp/robosh
 STAT $?
 
 HEAD "install Nodejs Depedncies"
-cd /home/roboshop/catalogue && npm install --unsafe-perm &>>/tmp/roboshop.log
+cd /home/roboshop/catalogue && npm install &>>/tmp/roboshop.log
 STAT $?
 
 HEAD "Fix permisions to App conent"
 chown roboshop:roboshop /home/roboshop -R
 STAT $?
+
+#mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+# systemctl daemon-reload
+# systemctl start catalogue
+# systemctl enable catalogue
