@@ -37,8 +37,12 @@ STAT $?
 HEAD "Update DNS Records in SystemD fie"
 STAT $?
 
-HEA "Setup SystemD Service"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal /home/roboshop/catalogue/systemd.service && /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+HEAD "Setup SystemD Service"
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service && /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+STAT $?
+
+
+
 # systemctl daemon-reload
 # systemctl start catalogue
 # systemctl enable catalogue
