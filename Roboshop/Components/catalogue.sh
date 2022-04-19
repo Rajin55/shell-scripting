@@ -27,14 +27,18 @@ cd /home/roboshop && rm -rf catalogue && unzip /tmp/catalogue.zip &>>/tmp/robosh
 STAT $?
 
 HEAD "install Nodejs Depedncies"
-cd /home/roboshop/catalogue && yum install npm -y &>>/tmp/roboshop.log
+cd /home/roboshop/catalogue && yum install npm -y --unsafe-perm&>>/tmp/roboshop.log
 STAT $?
 
 HEAD "Fix permisions to App conent"
 chown roboshop:roboshop /home/roboshop -R
 STAT $?
 
-#mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+HEAD "Update DNS Records in SystemD fie"
+STAT $?
+
+HEA "Setup SystemD Service"
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal /home/roboshop/catalogue/systemd.service && /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 # systemctl daemon-reload
 # systemctl start catalogue
 # systemctl enable catalogue
