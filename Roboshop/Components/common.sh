@@ -35,7 +35,7 @@ NODEJS(){
   STAT $?
 
   HEAD "install Nodejs Depedncies"
-  cd /home/roboshop/$1 && yum install npm -y &>>/tmp/roboshop.log
+  cd /home/roboshop/$1 && npm install &>>/tmp/roboshop.log
   STAT $?
 
   HEAD "Fix permisions to App conent"
