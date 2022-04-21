@@ -7,7 +7,7 @@ if [ -z "${COMPONENT}" ]; then
 fi
 LID=lt-090f6832097248547
 LVER=2
-## Validate If Instance is already there
+# Validate If Instance is already there
 DNS_UPDATE() {
   PRIVATEIP=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}"  | jq .Reservations[].Instances[].PrivateIpAddress | xargs -n1)
   sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${PRIVATEIP}/" record.json >/tmp/record.json
@@ -29,3 +29,4 @@ INSTANCE_CREATE() {
   sleep 10
   DNS_UPDATE
 }
+
