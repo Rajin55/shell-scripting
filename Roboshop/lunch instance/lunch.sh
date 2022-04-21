@@ -18,6 +18,7 @@ DNS_UPDATE(){
 INSTANCE_STATE=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${COMPONENT}" | jq .Reservations[].Instances[].state.Name | xargs -n1 )
 if [ "${INSTANCE_STATE}" = "running" ]; then
   echo"Instance is already Existed"
+  DNS_UPDATE
   exit 0
 fi
 
