@@ -27,7 +27,7 @@ NODEJS(){
   fi
 
   HEAD "Download App from GitHub"
-  curl -s -L -o /tmp/$1.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>/tmp/roboshop.log
+  curl -s -L -o /tmp/$1.zip "https://github.com/roboshop-devops-project/$1/archive/main.zip" &>>/tmp/roboshop.log
   STAT $?
 
   HEAD "Extract the Downloaded file"

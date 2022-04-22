@@ -1,3 +1,7 @@
 #!/bin/bash
 
-echo Installing cart
+source Components/common.sh
+rm -f /tmp/roboshop.log
+#set-hostname cart
+
+NODEJS "cart"
