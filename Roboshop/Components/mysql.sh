@@ -18,3 +18,6 @@ STAT $?
 
 HEAD "Start MYSQL Service"
 systemctl enable mysqld &>>/tmp/roboshop.log && systemctl start mysqld &>>/tmp/roboshop.log
+STAT $?
+
+DEF_PASS=$(grep 'A temporary password''temp /var/log/mysqld.log
