@@ -20,4 +20,26 @@ HEAD "Start MYSQL Service"
 systemctl enable mysqld &>>/tmp/roboshop.log && systemctl start mysqld &>>/tmp/roboshop.log
 STAT $?
 
-DEF_PASS=$(grep 'A temporary password''temp /var/log/mysqld.log
+DEF_PASS=$(grep 'A temporary password'temp /var/log/mysqld.log | awk '{print $NF}')
+echo "ALTER USER 'root'@'localhost' IDENTIFIED NY 'RoboShop@1';
+unstill plugin validate_password;" >/tmp/db.sql
+
+echo show database | mysql -u root -pRoboShop@1 &>>/tmp/roboshop.log
+if [ $? -ne 0 ]; then
+ HEAD "Reset  MYSQL Passwd"
+ mysql --connect-expired-password -uroot -p"${DEF_PASS}" </tmp/db.sql &>>/tmp/roboshop.log
+  STAT $?
+fi
+
+HEAD "Download Schema from GitHub\t"
+curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip" &>>/tmp/roboshop.log
+STAT $?
+
+HEAD "Extract Downloaded Archive\t"
+cd /tmp
+unzip -o mysql.zip &>>/tmp/roboshop.log
+STAT $?
+
+HEAD "Load Shipping Schema"
+cd /tmp && unzip -o mysql.zip &>>/tmp/roboshop.log && cd mysql-main && mysql -u root -pRoboShop@1 <shipping.sql  &>>/tmp/roboshop.log
+STAT $?
