@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#source Components/common.sh
-#rm -f /tmp/roboshop.log
+source Components/common.sh
+rm -f /tmp/roboshop.log
 #set-hostname rabbitmq
 
 HEAD "Install Erlang"
