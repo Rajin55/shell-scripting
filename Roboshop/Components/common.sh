@@ -107,3 +107,4 @@ PYTHON3() {
   STAT $?
 
   SETUP_SYSTEMD "$1"
+  }
