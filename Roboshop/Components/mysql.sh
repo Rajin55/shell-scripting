@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source components/common.sh
+source Components/common.sh
 rm -f /tmp/roboshop.log
 #set-hostname mysql
 
