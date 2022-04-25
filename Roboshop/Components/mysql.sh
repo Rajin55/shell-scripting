@@ -35,10 +35,10 @@ HEAD "Download Schema from GitHub\t"
 curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip" &>>/tmp/roboshop.log
 STAT $?
 
-HEAD "Extract Downloaded Archive\t"
-cd /tmp
-unzip -o mysql.zip &>>/tmp/roboshop.log
-STAT $?
+#HEAD "Extract Downloaded Archive\t"
+#cd /tmp
+#unzip -o mysql.zip &>>/tmp/roboshop.log
+#STAT $?
 
 HEAD "Load Shipping Schema"
 cd /tmp && unzip -o mysql.zip &>>/tmp/roboshop.log && cd mysql-main && mysql -u root -pRoboShop@1 <shipping.sql  &>>/tmp/roboshop.log
